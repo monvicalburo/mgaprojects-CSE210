@@ -6,27 +6,28 @@ class Program
     {
 
         Random randomGenerator = new Random();
-        int number = randomGenerator.Next(1, 11);
+        int number = randomGenerator.Next(1, 101);
         int guess = -1;
 
         while (guess != number)
         {
             Console.Write("What is your guess? ");
-            guess = int.Parse(Console.ReadLine());
+            string response = Console.ReadLine();
+            guess = int.Parse(response);
 
 
             if (guess < number)
             {
-                Console.Write("Higher");
+                Console.WriteLine("Higher");
             }
             else if (guess > number)
             {
-                Console.Write("Lower");
+                Console.WriteLine("Lower");
             }
             else
             {
-                Console.Write("You Guessed it!");
+                Console.WriteLine("You Guessed it!");
             }
-        }  
+        }
     }
 }
