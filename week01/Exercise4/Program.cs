@@ -31,7 +31,7 @@ class Program
             sum += number;
         }
         Console.WriteLine($"The sum is {sum}");
-        float average = sum / numbers.Count;
+        double average = ((double)sum) / numbers.Count;
         Console.WriteLine($"The average is: {average}");
 
         int max = 0;
